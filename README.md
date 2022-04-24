@@ -10,6 +10,7 @@ Currently includes:
   - Bisection Method
   - Fixed Point Method
   - Newton Method
+  - Modified Newton Method
   - Secant Method
   - Regula Falsi Method (Method of False Position)
 
@@ -24,3 +25,28 @@ Currently includes:
   - Method of Least Squares Approximation
   - Polynomial Least Squares Approximation
   
+### Interpolation
+  - Lagrange Interpolation
+
+### Divided Difference
+  - Direct Difference
+  - Forward Difference
+  - Backward Difference
+  - Mid Difference
+
+### Numerical Differentiation
+  - Forward and Backward Difference Formula
+  - First Derivative Point Formula
+  - Second Derivative Mid Point Formula
+
+### Numerical Integration
+  - Trapezoidal Rule
+  - Simpson Rule
+  - Gaussian Quadrature
+
+### Differential Equation
+  - Euler Method
+  - Taylor Method
+  - Runga Kutta Method
+
+
