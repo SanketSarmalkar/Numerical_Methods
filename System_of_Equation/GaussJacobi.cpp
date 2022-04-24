@@ -1,3 +1,19 @@
+/*
+Sanket S.Sarmalkar
+Gauss Jacobi Method
+*/
+#include <stdio.h>
+#include <iostream>
+#include <limits>
+#include <cmath>
+#include <climits>
+#include <cstdlib>
+#include <cstring>
+#include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
+using namespace std;
+using namespace __gnu_pbds;
+#define ll long long int
 #include <iostream>
 #include <iomanip>
 #include <math.h>
@@ -9,43 +25,54 @@
 
 using namespace std;
 
-/* Main function */
+/* Main function */ 
 int main()
 {
-    double x10 = 0, x20 = 0, x30 = 0,x40=0, x11, x21, x31, x41;
-    int step = 1;
-
-    /* Setting precision and writing floating point values in fixed-point notation. */
-    cout << setprecision(6) << fixed;
-
-    /* Input */
-    /* Reading tolerable error */
     int n;
-    cout<<"enter the no. of iterations"<<endl;
-    cin>>n;
-
-    cout << endl
-         << "Count\tx1\t\tx2\t\tx3\t\tx4" << endl;
-    do
+    double x10 = 0, x20 = 0, x30 = 0, x40 = 0, x11, x21, x31, x41;
+    cout << "Enter the no. of variables:" << endl;
+    cin >> n;
+    double a[n][n];
+    cout << "Enter the Equation matrix (A):" << endl;
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < n; j++){
+            cin >> a[i][j];
+        }
+    }
+    cout << "Enter the B matrix:" << endl;
+    double b[n];
+    for (int i = 0; i < n; i++){
+        cin >> b[i];
+    }
+    double guess[n], g[n];
+    cout << "Enter the guess values of the variables respectively:" << endl;
+    for (int i = 0; i < n; i++){
+        cout << "guess value for variable " << i + 1<<": ";
+        cin >> guess[i];
+    }
+    for (int i = 0; i < n; i++)
     {
-        /* Calculation */
-        x11 = f1(x10, x20, x30, x40);
-        x21 = f2(x10, x20, x30, x40);
-        x31 = f3(x10, x20, x30, x40);
-        x41 = f4(x10, x20, x30, x40);
-        cout << step << "\t" << x11 << "\t" << x21 << "\t" << x31 <<"\t"<<x41<< endl;
-
-        
-        step++;
-
-        /* Set value for next iteration */
-        x10 = x11;
-        x20 = x21;
-        x30 = x31;
-        x40 = x41;
-    } while (step!=n+1);
-
-    cout << endl
-         << "Solution: x = " << x11 << ", y = " << x21 << " and z = " << x31;
+        g[i] = 0;
+    }
+    int c;
+    cout << "enter the no. of iterations:" << endl;
+    cin >> c;
+    for (int i = 0; i < c; i++){
+        cout<<i+1<<"   ";
+        for (int j = 0; j < n; j++){
+            double x = 0;
+            for (int k = 0; k < n; k++){
+                if (k != j){
+                    x += a[j][k] * guess[k];
+                }
+            }
+            g[j] = (b[j] - x) / a[j][j];
+            cout << setprecision(10) << g[j] << " ";
+        }
+        for(int h=0;h<n;h++){
+            guess[h]=g[h];
+        }
+        cout << endl;
+    }
     return 0;
 }
