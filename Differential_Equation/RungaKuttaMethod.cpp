@@ -45,6 +45,7 @@ int main(){
     cin >> o;
     h = (b - a) / n;
     double t = a;
+    cout << "time           F(x)"<<endl;
     for (int i = 0; i < n; i++){
         l = Euler(w, t, h, o);
         w = l;
