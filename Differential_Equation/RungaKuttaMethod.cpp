@@ -1,6 +1,6 @@
 /*
 Sanket S.Sarmalkar
-Euler's Method
+Runga kutta Method
 */
 #include <iostream>
 #include <limits>
