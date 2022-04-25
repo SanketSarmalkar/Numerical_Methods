@@ -10,16 +10,15 @@ using namespace std;
 using namespace __gnu_pbds;
 #define ll long long int
 double fder(double x){
-    double h = 4*x + 4*x*sin(x) - 4*cos(x)- 2*sin(2*x);
+    double h = 3 + sin(x);
     return h;
 }
 double f(double x){
-    double l = 1- 4*x*cos(x) +2*pow(x,2) +cos(2*x);
+    double l = 3*x - cos(x) -1;
     return l;
 }
 double NM(double p){
     double p1 = p - (f(p)/fder(p));
-    cout << f(p) <<"  "<<fder(p) << endl;
     return p1; 
 }
 int main(){

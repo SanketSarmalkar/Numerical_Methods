@@ -17,7 +17,7 @@ double f(double x){
     double y = pow(x,6) - pow(x,2)*sin(2*x);
     return y;
 }
-double standardF(double x, double a, double b){
+double standardF(double x, double a, double b){      // to match the interval to -1 to 1
     double k = f(((b-a)*x + (b+a))/2) * ((b-a)/2);
     return k;
 }

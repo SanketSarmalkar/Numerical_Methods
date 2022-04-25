@@ -1,3 +1,7 @@
+/*
+Sanket S.Sarmalkar
+Modified Newton's Method
+*/
 #include <iostream>
 #include <limits>
 #include <cmath>
