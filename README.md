@@ -32,7 +32,7 @@ Currently includes:
   - Direct Difference
   - Forward Difference
   - Backward Difference
-  - Mid Difference
+  - Central Difference
 
 ### Numerical Differentiation
   - Forward and Backward Difference Formula
