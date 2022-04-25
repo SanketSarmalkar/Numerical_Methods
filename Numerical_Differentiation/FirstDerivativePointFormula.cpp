@@ -13,7 +13,7 @@ Point Formulas for first Derivatives
 using namespace std;
 using namespace __gnu_pbds;
 #define ll long long int
-double ThreePointEndPointFormula(){
+void ThreePointEndPointFormula(){
     double x, h;
     cout<<"enter the point at which we should find the first derivative:"<<endl;
     cin>>x;
@@ -31,7 +31,7 @@ double ThreePointEndPointFormula(){
     double fder = (1/(2*h))*(-3*x1 + 4*x2 - x3);
     cout<<"The value of first derivative at Xo = "<<x<<" using h = "<<h<<" is "<<fder<<endl;
 }
-double ThreePointMidPointFormula(){
+void ThreePointMidPointFormula(){
     double x, h;
     cout<<"enter the point at which we should find the first derivative:" << endl;
     cin>>x;
@@ -47,7 +47,7 @@ double ThreePointMidPointFormula(){
     double fder = (1/(2*h))*(x1 - x2);
     cout<<"The value of first derivative at Xo = "<<x<<" using h = "<<h<<" is "<<fder<<endl;
 }
-double FivePointMidPointFormula(){
+void FivePointMidPointFormula(){
     double x, h;
     cout << "enter the point at which we should find the first derivative:" << endl;
     cin >> x;
@@ -65,9 +65,9 @@ double FivePointMidPointFormula(){
     cin>>x4;
     cout<<endl;
     double fder = (1/(12*h))*(x4-8*x3+8*x2-x1);
-    cout<<"The value of first derivative at Xo = " << x << " using h = " << h << " is " << fder << endl;
+    cout<<"The value of first derivative at Xo = " << x << " using h = " << h << " is " <<setprecision(7)<< fder << endl;
 }
-double FivePointEndPointFormula(){
+void FivePointEndPointFormula(){
     double x, h;
     cout<<"enter the point at which we should find the first derivative:"<<endl;
     cin>>x;
