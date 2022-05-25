@@ -6,7 +6,7 @@ by Richard L. Burden and J. Douglas Faires
 
 Currently includes:
 
-## Nonlinear Systems
+### Nonlinear Systems
   - Bisection Method
   - Fixed Point Method
   - Newton Method
